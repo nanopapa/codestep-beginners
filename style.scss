@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+/*
+================================================================
+body
+================================================================
+*/
+
+html{
+    font-size: 62.5%;
+}
+
+img{
+    max-width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:#383e45;
+}
+
+h2,p{
+    color:#383e45;
+
+}
+
+/*
+================================================================
+header
+================================================================
+*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto;
+    padding: 0 4%;
+    max-width: 960px;
+
+        .header__logo {
+            line-height: 1px;
+            // ? 
+            padding:10px 0;
+        }
+            img{
+                width: 120px;
+            }
+        
+        .header__list{
+            font-size: 1.4rem;
+            nav ul{
+                display: flex;
+                li:hover{
+                    opacity: .7;
+                }
+                li:last-child{
+                    margin-left: 30px; 
+                    }
+
+                }
+            }
+        }
+// header 
+
+/*
+================================================================
+mainvisual
+================================================================
+*/
+
+.mainvisual {
+    margin-bottom: 80px;
+}
+
+.mainvisual img{
+    width: 100%;
+    object-fit: cover;
+    height: 600px;
+}
+
+
+/*
+================================================================
+About
+================================================================
+*/
+
+main{
+    text-align: center;
+    max-width: 960px;
+    margin:0 auto;
+    padding: 0 4%;
+
+
+        .section__title{
+            font-size: 3.2rem;
+            border-bottom:1px solid #383e45;
+            display: inline-block;
+            margin-bottom: 60px;
+        }
+
+        .About__flex{
+            display: flex;
+            justify-content: center;
+            .profile__img img{
+                width: 100px;
+                border-radius: 50%;
+                margin-right: 30px;
+                display: inline-block;
+                }
+            
+            .About__text{
+                text-align: left;
+            } 
+            .profile__name{
+                font-size: 1.6rem;
+                font-weight: bold;
+            }
+            .profile__txt{
+                font-size: 1.4rem;
+                text-align: justify;
+                margin-top: 10px;
+            }
+            
+
+        }
+        // About__flex
+
+
+
+/*
+================================================================
+Bicycle
+================================================================
+*/
+
+.Bicycle{
+    margin: 100px 0 110px 0;
+
+        .Bicycle__list{
+            display: flex;
+            justify-content: space-between;
+            
+                li{
+                    width: 32%;
+                        .list__title{
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                            margin: 15px 0 14px 0;
+                        }
+                        .list__txt{
+                            font-size: 1.5rem;
+                        }
+                }
+        }
+}
+
+
+
+}
+// main 
+
+/*
+================================================================
+copyright
+================================================================
+*/
+
+.copyright{
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom:10px;
+}
+
+/*
+================================================================
+sp
+================================================================
+*/
+
+@media (max-width:600px){
+    .mainvisual img {
+        height: calc(100vh - 60px);
+    }
+
+    .About__flex{
+        flex-direction: column;
+    }
+
+    .Bicycle__list{
+        flex-direction: column;
+    }
+    main .Bicycle .Bicycle__list li{
+        width: 100%;
+    }
+
+}
+
